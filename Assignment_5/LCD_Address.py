@@ -28,15 +28,15 @@ LCD_LINE_2 = 0xC0 # LCD RAM Address for 2nd Line
 
 def main():
 
-        # Set Up Button GPIO, input w/ pulldown
-        GPIO.setup(BTN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-
         # Previous States Initialization:
         btn_Pressed = False
         prev_IP = None
         prev_Display = None 
 
         LCD_Setup() # Set up/initialize LCD
+
+        # Set Up Button GPIO, input w/ pulldown
+        GPIO.setup(BTN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
         # Inform user that the RPi is waiting for IP
         LCD_String("Waiting for IP", LCD_LINE_1)
