@@ -52,7 +52,7 @@ def main():
 
                 if pressed:  # Button pressed
                         if prev_Display != "MAC": # If MAC is NOT being displayed
-                                LCD_String("My MAC Address", LCD_LINE_1) # Print MAC Address
+                                LCD_String("My MAC Address:", LCD_LINE_1) # Print MAC Address
                                 LCD_String(myMACAddress or "N/A", LCD_LINE_2)
                                 prev_Display = "MAC" # New State = MAC Display
                 else:  # Button released
